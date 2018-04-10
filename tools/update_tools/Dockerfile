@@ -10,6 +10,8 @@ RUN bazel help info >/dev/null 2>&1
 # Install Python 2.7.12
 RUN apt-get install python -y
 
+RUN apt-get install git -y
+
 # Build par files.  We have a source and work directory to avoid
 # stomping on other files as root.
 CMD cp -r /opt/rules_python_source /opt/rules_python && \
